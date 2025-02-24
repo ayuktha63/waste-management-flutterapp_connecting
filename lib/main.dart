@@ -84,13 +84,29 @@ class _SmartDustbinAppState extends State<SmartDustbinApp> {
                                   fontSize: 18, fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 8),
-                            Text(
-                              "B: ${report['bValue']}  |  NB: ${report['nbValue']}",
+                            RichText(
+                              text: TextSpan(
+                                style: DefaultTextStyle.of(context).style,
+                                children: [
+                                  TextSpan(
+                                    text: "B: ${report['bValue']}  ",
+                                    style: TextStyle(color: Colors.green),
+                                  ),
+                                  TextSpan(
+                                    text: "|  NB: ${report['nbValue']}",
+                                    style: TextStyle(color: Colors.red),
+                                  ),
+                                ],
+                              ),
                             ),
                             SizedBox(height: 12),
                             Align(
                               alignment: Alignment.centerRight,
                               child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.green, // Button color
+                                  foregroundColor: Colors.white, // Text color
+                                ),
                                 onPressed: () => completeReport(report['id']),
                                 child: Text('Completed'),
                               ),
