@@ -64,9 +64,10 @@ Update the API base URL in the app to connect with your Flask backend:
 3. Cleaners mark bins as emptied, updating both the app and the central system.  
 
 ## 🤝 Contributors
-- [Your Name] - Flutter Developer  
-- [Partner 1] - Backend Integration  
-- [Partner 2] - UI/UX Design  
+- Krishna Prasad
+- Sudhin Suresh
+- Aashish S
+- Team Name: Orque
 
 ## 📜 License
 This project is licensed under the [MIT License](LICENSE).
